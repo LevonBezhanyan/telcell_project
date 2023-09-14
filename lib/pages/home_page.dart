@@ -9,10 +9,10 @@ class MyHomePage extends StatefulWidget {
    @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-int currentTab = 0;
 
   class _MyHomePageState extends State<MyHomePage> {
-     
+     int currentTab = 0;
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -80,7 +80,7 @@ int currentTab = 0;
         ],
       ),
       );
-    }
+  
   }
 
 
@@ -121,7 +121,7 @@ Widget getBody () {
 Widget section1() {
   return  SizedBox(
       height: 140,
-      // width: MediaQuery.of(context).size.width,
+      width: MediaQuery.of(context).size.width,
       child: ListView(
         padding: EdgeInsets.all(10),
         shrinkWrap: true,
@@ -133,12 +133,12 @@ Widget section1() {
         bgColor: Colors.green, 
         imageURL: 'https://automotiveblog.co.uk/wp-content/uploads/2021/10/Ford-Mustang-2.jpg',
         onTap: () { 
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => const TransportPage(),
-                //   ),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TransportPage(),
+                  ),
+                );
               }),
         serviceItem1(
           title: 'Իվենթներ', 
@@ -228,3 +228,4 @@ Widget section1() {
     )
     );
       }
+  }
