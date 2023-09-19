@@ -188,4 +188,15 @@ section7(){
           );
 }
 
-
+// section8() {
+//   return   Container(
+//             padding: const EdgeInsets.symmetric(horizontal: 15),
+//          child: const Row (
+//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//           children: [
+//           Text('Top products', style: TextStyle(color: Colors.black, fontSize: 20)),
+//           Text('view all'),
+//           ]
+//           ),
+//           );
+// }

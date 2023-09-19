@@ -1,5 +1,6 @@
 import 'package:first_app/helpers/colors.dart';
 import 'package:flutter/material.dart';
+// import 'package:first_app/widgets/other_sections.dart';
 
 class BonTab extends StatefulWidget {
   const BonTab({super.key});
@@ -47,6 +48,7 @@ class _BonTabState extends State<BonTab> {
             'label': 'Bon partners',
           },
         ]),
+       
       ),
       body: body(),
     );
@@ -201,6 +203,7 @@ class _BonTabState extends State<BonTab> {
         ),
       ),
     );
+
   }
 
   Widget itemList(List<Map<String, dynamic>> dataItems) {

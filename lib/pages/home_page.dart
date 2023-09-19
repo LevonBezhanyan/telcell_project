@@ -1,5 +1,7 @@
 import 'package:first_app/pages/BON_tab.dart';
+import 'package:first_app/pages/banking_tab.dart';
 import 'package:first_app/pages/main_tab.dart';
+import 'package:first_app/pages/qr_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:first_app/helpers/colors.dart';
 
@@ -57,7 +59,11 @@ Widget getBody () {
         return const MainTab();
       case 1:
         return const BonTab();
-      default:
+      case 2:
+        return const QRCodeTab();
+      case 3: 
+        return const BankingTab();
+      default: 
         return Container();
     }
 }
