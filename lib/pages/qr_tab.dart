@@ -37,7 +37,7 @@ class _QRCodeTabState extends State<QRCodeTab> with TickerProviderStateMixin {
         leading: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Text(
-            'QR Կոդ',
+            'QR code',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w500,
@@ -98,7 +98,7 @@ class _QRCodeTabState extends State<QRCodeTab> with TickerProviderStateMixin {
                 child: Padding(
                   padding: EdgeInsets.only(left: 40, top: 40, bottom: 40),
                   child: Text(
-                    'QR կոդը տեղադրեք քառակուսու կենտրոնում, \n եւ այն ավտոմատ կսկանավորվի',
+                    'Place the QR code in the center of the square \n and it will be automatically scanned',
                     style: TextStyle(color: Colors.white),
                     textAlign: TextAlign.center,
                   ),
@@ -135,7 +135,7 @@ class _QRCodeTabState extends State<QRCodeTab> with TickerProviderStateMixin {
                         ),
                       ),
                       child: const Text(
-                        'Բացել Նկարադարանից',
+                        'Open from gallery',
                         style: TextStyle(fontSize: 15),
                       ),
                     ),
@@ -153,7 +153,7 @@ class _QRCodeTabState extends State<QRCodeTab> with TickerProviderStateMixin {
                         ),
                       ),
                       child: Text(
-                        'Մուտքագրել Ստացողի դրամապանակի ID-ին',
+                        'Enter receiver\'s wallet ID',
                         style:
                             TextStyle(fontSize: 13, color: AppColors.appOrange),
                       ),
@@ -178,11 +178,11 @@ class _QRCodeTabState extends State<QRCodeTab> with TickerProviderStateMixin {
       tabs: const [
         Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
-          child: Text('Սկանավորել կոդը'),
+          child: Text('Scan code'),
         ),
         Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
-          child: Text('Իմ QR կոդը'),
+          child: Text('My QR code'),
         ),
       ],
     );

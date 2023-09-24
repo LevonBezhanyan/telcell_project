@@ -48,8 +48,8 @@ class _BonTabState extends State<BonTab> {
             'label': 'Bon partners',
           },
         ]),
-       
       ),
+      
       body: body(),
     );
   }
@@ -93,6 +93,7 @@ class _BonTabState extends State<BonTab> {
             )
           ],
         )
+        
       ],
     );
   }

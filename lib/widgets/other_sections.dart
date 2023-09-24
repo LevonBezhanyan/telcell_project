@@ -61,14 +61,14 @@ section5() {
     padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
     child: Row(
       children: [
-        serviceItem4(title: 'Անվճար առաքում',  bgColor: Colors.purple.shade300, imageURL: ''),
-        serviceItem4(title: '30% զեղչ',  bgColor: Colors.purple, imageURL: ''),
-        serviceItem4(title: 'Նվեր՝ պիցցա', bgColor: Colors.amber.shade900, imageURL: ''),
-        serviceItem4(title: '20% բոնուս', bgColor: Colors.purple, imageURL: ''),
-        serviceItem4(title: '1000 դրամ զեղչ', bgColor: Colors.orange, imageURL: ''),
-        serviceItem4(title: '1000 դրամ զեղչ', bgColor: Colors.purple, imageURL: ''),
-        serviceItem4(title: 'Անվճար առաքում', bgColor: Colors.green.shade200, imageURL: ''),
-        serviceItem4(title: 'Նվեր՝ Yan (250մլ)', bgColor: Colors.red, imageURL: ''),
+        serviceItem4(title: 'Անվճար առաքում',  bgColor: Colors.purple.shade300, imageURL: 'assets/images/1920px-Van_Gogh_The_Olive_Trees..jpg'),
+        serviceItem4(title: '30% զեղչ',  bgColor: Colors.purple, imageURL: 'assets/images/1920px-Vincent_van_Gogh_-_Wheat_Field_with_Cypresses_-_Google_Art_Project.jpg'),
+        serviceItem4(title: 'Նվեր՝ պիցցա', bgColor: Colors.amber.shade900, imageURL: 'assets/images/1920px-Vincent_Willem_van_Gogh_098.jpg'),
+        serviceItem4(title: '20% բոնուս', bgColor: Colors.purple, imageURL: 'assets/images/Irises-Vincent_van_Gogh.jpg'),
+        serviceItem4(title: '1000 դրամ զեղչ', bgColor: Colors.orange, imageURL: 'assets/images/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg'),
+        serviceItem4(title: '1000 դրամ զեղչ', bgColor: Colors.purple, imageURL: 'assets/images/Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg'),
+        serviceItem4(title: 'Անվճար առաքում', bgColor: Colors.green.shade200, imageURL: 'assets/images/Whitehousenight.jpg'),
+        serviceItem4(title: 'Նվեր՝ Yan (250մլ)', bgColor: Colors.red, imageURL: 'assets/images/Vincent_van_Gogh_-_Wheatfield_under_thunderclouds_-_Google_Art_Project.jpg'),
       ])
   );
  }
@@ -81,6 +81,10 @@ section5() {
       padding: const EdgeInsets.fromLTRB(8, 15, 5, 25),
       margin: const EdgeInsets.all(5),
       decoration: BoxDecoration(
+        border: Border.all(style: BorderStyle.none),
+      image: DecorationImage(
+        fit: BoxFit.fill,
+        image:AssetImage(imageURL)),
       color: bgColor,
       borderRadius: BorderRadius.circular(15)
       ),
@@ -89,7 +93,7 @@ section5() {
       child: Column( 
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(title, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: AppColors.bgColor)),
+          Text(title, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: AppColors.bgColor, backgroundColor: Colors.black26)),
       ]),
     );
   }

@@ -2,6 +2,7 @@
 import 'package:first_app/helpers/colors.dart';
 import 'package:flutter/material.dart';
 
+
 class BankingTab extends StatefulWidget {
  const BankingTab({super.key});
 
@@ -13,6 +14,13 @@ class _BankingTabState extends State<BankingTab> {
   @override
   Widget build (BuildContext context) {
     return Scaffold(
+       floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColors.appLightGrey,
+        elevation: 1,
+        onPressed: (){
+          Navigator.of(context).pushReplacementNamed('login');
+        },
+        child: Icon(Icons.output_rounded, color: AppColors.appOrange),),
       backgroundColor: AppColors.bgColor,
       appBar: AppBar(
          backgroundColor: AppColors.bgColor,
@@ -164,6 +172,7 @@ Widget body () {
           ],
         ),
       ),
+     
     ],
   );
 }

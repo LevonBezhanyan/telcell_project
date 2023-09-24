@@ -192,7 +192,7 @@ Widget balance  () {
 
 Widget section1() {
   return  SizedBox(
-      height: 140,
+      height: 150,
       width: MediaQuery.of(context).size.width,
       child: ListView(
         padding: EdgeInsets.all(10),
@@ -203,7 +203,7 @@ Widget section1() {
           title: 'Տրանսպորտ', 
         subtitle: 'Ուղետոմսեր', 
         bgColor: Colors.green, 
-        imageURL: 'https://i.gifer.com/origin/bb/bba00bd79506f411f9170e822f57674f_w200.gif',
+        imageURL: 'assets/images/image001-(3).jpg',
         onTap: () { 
                 Navigator.push(
                   context,
@@ -216,67 +216,67 @@ Widget section1() {
           title: 'Իվենթներ', 
           subtitle: '', 
           bgColor: Colors.purple, 
-          imageURL: 'https://static.vecteezy.com/system/resources/thumbnails/008/843/895/small/message-events-funny-plasticine-alphabet-letters-on-white-background-png.png', 
+          imageURL: 'assets/images/1024px-Van_Gogh_-_Zypressen_mit_zwei_weiblichen_Figuren.jpeg', 
           onTap: () {}),
         serviceItem1(
           title: 'Տերմինալից', 
           subtitle: 'համալրված գումարը այստեղ', 
           bgColor: Colors.amber.shade900, 
-          imageURL: 'https://static.vecteezy.com/system/resources/previews/023/629/086/original/money-on-pig-saving-bank-in-png.png', 
+          imageURL: 'assets/images/default.jpg', 
           onTap: () {}),
         serviceItem1(
           title: 'Վարկ', 
           subtitle: 'մեքենայի գրավադրմամբ', 
           bgColor: Colors.purple, 
-          imageURL: 'https://static.vecteezy.com/system/resources/previews/019/038/734/original/hand-putting-coin-into-the-car-as-piggy-bank-save-money-for-car-concept-png.png', 
+          imageURL: 'assets/images/roadcypressesv.webp', 
           onTap: () {}),
         serviceItem1(
           title: 'Զգոնությունդ', 
           subtitle: 'մի կորցրու', 
           bgColor: Colors.orange, 
-          imageURL: '', 
+          imageURL: 'assets/images/unnamed.jpg', 
           onTap: () {}),
         serviceItem1(
           title: 'Բոլոր քարտերդ', 
           subtitle: 'մեկ տեղում', 
           bgColor: Colors.purple, 
-          imageURL: '', 
+          imageURL: 'assets/images/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_(454045).jpg', 
           onTap: () {}),
         serviceItem1(
           title: 'Բացել', 
           subtitle: 'բանկային հաշիվ', 
           bgColor: Colors.green.shade200, 
-          imageURL: '', 
+          imageURL: 'assets/images/1280px-Vincent_Van_Gogh_0013.jpg', 
           onTap: () {}),
         serviceItem1(
           title: 'BON մարքեթ', 
           subtitle: '', 
           bgColor: Colors.red, 
-          imageURL: '', 
+          imageURL: 'assets/images/default (1).jpg', 
           onTap: () {}),
         serviceItem1(
           title: 'Խաղի', 
           subtitle: 'կանոնները փոխվել են', 
           bgColor: Colors.purple, 
-          imageURL: '', 
+          imageURL: 'assets/images/1024px-Vincent_Willem_van_Gogh_014.jpg', 
           onTap: () {}),
         serviceItem1(
           title: 'GLOBAL CREDIT', 
           subtitle: 'Արագ վարկ', 
           bgColor: Colors.grey, 
-          imageURL: '', 
+          imageURL: 'assets/images/1024px-Van_Gogh_-_Zypressen_mit_zwei_weiblichen_Figuren.jpeg', 
           onTap: () {}),
         serviceItem1(
           title: 'Փոխանցում<<', 
           subtitle: 'ցանկացած բանկային քարտի', 
           bgColor: Colors.orange, 
-          imageURL: '', 
+          imageURL: 'assets/images/1_L5TBLjw_IOVwqzlI9_RB-Q.jpg', 
           onTap: () {}),
         serviceItem1(
           title: 'Ավտոս ու ես', 
           subtitle: '', 
           bgColor: Colors.black, 
-          imageURL: '', 
+          imageURL: 'assets/images/Bedroom-oil-canvas-Vincent-van-Gogh-Art-1889.webp', 
           onTap: () {}),
       ])
   );
@@ -286,35 +286,33 @@ Widget section1() {
   Widget serviceItem1(
       {required String title,
       required String subtitle,
-      required Color bgColor,
-      required String imageURL, required void Function() onTap}) {
+      Color? bgColor,
+      required String imageURL, 
+      required void Function() onTap}) {
     return GestureDetector(
       onTap: onTap,
     child: Container(
       padding: const EdgeInsets.fromLTRB(8, 10, 5, 0),
       margin: const EdgeInsets.all(5),
       decoration: BoxDecoration(
-      color: bgColor,
+        border: Border.all(style: BorderStyle.none),
+      image:  DecorationImage(
+        image: AssetImage(imageURL),
+        fit: BoxFit.fill,
+        ),
       borderRadius: BorderRadius.circular(15)
       ),
        width: 102,
-      height: 140,
+      height: 150,
       child: Stack(
           children: [
-            if (imageURL.isNotEmpty)
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Image.network(
-                  imageURL,
-                  fit: BoxFit.contain,
-                ),
-              ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   title,
                   style: const TextStyle(
+                    backgroundColor: Colors.black26,
                       color: Colors.white,
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
@@ -323,6 +321,7 @@ Widget section1() {
                   Text(
                     subtitle,
                     style: const TextStyle(
+                      backgroundColor: Colors.black38,
                       color: Colors.white,
                       fontSize: 10,
                       fontWeight: FontWeight.w100,
